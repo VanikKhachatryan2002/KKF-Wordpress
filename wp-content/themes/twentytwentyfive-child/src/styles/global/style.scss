@@ -1,0 +1,62 @@
+@import "../mixins/mixins";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ui-monospace;
+}
+
+:root {
+    --wp--preset--spacing--60: 10px; 
+}
+
+main{
+    > .has-global-padding{
+        padding: 0;
+    }
+}
+
+.hidden{
+    display: none;
+    &-mobile{
+       @include respondTo('mobile') {
+            display: none;
+       }
+    }
+    &-tablet{
+        @include respondTo('tablet') {
+            display: none;
+        }
+    }
+    &-desktop{
+        @include respondTo('desktop') {
+            display: none;
+        }
+    }
+}
+
+.fancybox-container{
+    overflow: hidden;
+
+    .fancybox-infobar{
+        top: 30px;
+        left: 30px;
+    }
+
+    .fancybox-toolbar {
+        right: 10px;
+        top: 30px;
+    }
+
+    .fancybox-navigation .fancybox-button--arrow_right{
+        right: max(env(safe-area-inset-right), 10px);
+    }
+
+    .fancybox-navigation .fancybox-button--arrow_left {
+        left: max(env(safe-area-inset-left), 10px);
+    }
+    
+}
+
+
+

@@ -1,0 +1,67 @@
+.single-works{
+    main{
+        overflow: hidden;
+        h1{
+            text-align: center;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+        }
+
+        .categoriesContainer{
+            padding: 60px;
+            overflow: hidden;
+            max-width: 100%;
+    
+            h1{
+                text-align: center;
+                margin-bottom: 60px;
+            }
+    
+            .swiper {
+                width: 100%;
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            .swiper-container-categories {
+                width: 100%;
+
+                .swiper-slide {
+                    background-position: center;
+                    background-size: cover;
+                    width: 350px;
+                    height: 400px;
+                    flex-shrink: 0;
+
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+
+                    @include respondTo('mobile') {
+                        width: 100%;
+                   }
+                }
+            }
+    
+            .fancybox-caption {
+                font-size: 1.2em;
+                color: #fff;
+                background-color: rgba(0, 0, 0, 0.8);
+                padding: 10px;
+                border-radius: 5px;
+            }
+    
+            .fancybox-toolbar {
+                background-color: rgba(0, 0, 0, 0.9);
+            }
+
+            @include respondTo('mobile') {
+                padding: 20px;
+           }
+    
+        }
+    }
+}
+
+

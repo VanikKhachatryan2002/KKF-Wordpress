@@ -1,0 +1,39 @@
+{
+    "name": "illuminealev/duckcreek-theme",
+    "type": "wordpress-theme",
+    "description": "Custom tailored Wordpress Theme",
+    "homepage": "https://github.com/illuminealev/afmda.git",
+    "authors": [
+        {
+            "name": "the LeverageIT team",
+            "email": "support@leverage.it",
+            "homepage": "https://leverage.it"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "*"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "*",
+        "roave/security-advisories": "dev-latest",
+        "squizlabs/php_codesniffer": "*",
+        "wp-coding-standards/wpcs": "*"
+    },
+    "config": {
+        "platform": {
+            "php": "8.1"
+        },
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Kkf\\": "classes/",
+            "Kkf\\Managers\\" : "classes/Managers"
+        }
+    },
+    "scripts": {
+        "lint": "./vendor/bin/phpcs --standard=phpcs.xml"
+    }
+}
